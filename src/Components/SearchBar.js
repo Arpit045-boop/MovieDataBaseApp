@@ -18,10 +18,12 @@ function SearchBar() {
 
     return (
         <div>
-            <input type="text" placeholder='Search Movie Name' onChange={getDetails} />
-            <button onClick={() => getData()}>
-                Searches
-            </button>
+            <div className='container'>
+                <input className="form-control" type="text" placeholder='Search Movie Name' onChange={getDetails} />
+                <button type="button" style={{ margin: "2% 0 0 45%" }} className="btn btn-primary" onClick={() => getData()}>
+                    Searches
+                </button>
+            </div>
             {data.Response && data.Search.map((currentMovie, index) => {
                 return (<>
                     <Content key={index} img={currentMovie.Poster} title={currentMovie.Title} />
