@@ -5,7 +5,8 @@ function Content(props) {
         <div>
             <div className='c'>
                 <h3>{props.title}</h3>
-                <img src={props.img} />
+                <img className='poster' src={props.img} />
+                <h4>Launch year {props.year}</h4>
             </div>
         </div>
     )

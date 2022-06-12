@@ -26,7 +26,7 @@ function SearchBar() {
             </div>
             {data.Response && data.Search.map((currentMovie, index) => {
                 return (<>
-                    <Content key={index} img={currentMovie.Poster} title={currentMovie.Title} />
+                    <Content key={index} img={currentMovie.Poster} title={currentMovie.Title} year={currentMovie.Year } />
                 </>)
             })}
         </div>
